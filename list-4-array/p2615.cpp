@@ -18,10 +18,10 @@ int main()
     //    cout << endl;
     //}
     int row;
-    int column
+    int column;
     for(int k=2;k<=n*n;k++){
-        row=k/n;
-        column=k-n*row;
+        row=k/n+1;
+        column=k%n+1;
         cout<<row<<" "<<column<<endl;
     }
     return 0;
