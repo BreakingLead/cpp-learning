@@ -20,7 +20,8 @@ struct Wu
 };
 int main()
 {
-    Wu wu1();
+    
+    auto wu1();
     if(wu1)
     return 0;
 }
