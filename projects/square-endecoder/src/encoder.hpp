@@ -12,9 +12,8 @@ private:
     vector<char> in_datas;
     
 public:
-    Encoder(vector<char>);
-    void SetDatain(vector<char>);
+    Encoder(origin_data);
+    void SetDatain(origin_data);
     void GenerateEncodedData();
-    void GenerateChessEncodedData();
-    vector<char> GetEncodedData();
+    origin_data GetEncodedData();
 };

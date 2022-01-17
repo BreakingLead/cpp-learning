@@ -3,15 +3,19 @@
 #include <string>
 #include <vector>
 #include <cmath>
+#include "encoder.hpp"
+#pragma once
+
 using namespace std;
+typedef vector<char> origin_data;
 class Encoder
 {
 private:
-    vector<char> in_datas;
-    vector<char> out_datas;
+    origin_data in_datas;
+    origin_data out_datas;
 
 public:
-    Encoder(vector<char> _in_datas)
+    Encoder(origin_data _in_datas)
     {
         in_datas = _in_datas;
     }
@@ -41,7 +45,7 @@ public:
         }
     }
 
-    vector<char> GetEncodedData()
+    origin_data GetEncodedData()
     {
         return out_datas;
     }

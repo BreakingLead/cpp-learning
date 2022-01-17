@@ -3,7 +3,13 @@
 #include <cstdio>
 #include <vector>
 #include <algorithm>
+
+#pragma once
+
 using namespace std;
+
+
+
 class Decoder
 {
 private:
