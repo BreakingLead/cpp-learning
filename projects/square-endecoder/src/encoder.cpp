@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 #include <cmath>
-#include "encoder.hpp"
 using namespace std;
 class Encoder
 {
@@ -22,7 +21,7 @@ public:
 
     }
 
-    void GenerateChessEncodedData()
+    void GenerateEncodedData()
     {
         int sum;
         for (auto i : in_datas)
