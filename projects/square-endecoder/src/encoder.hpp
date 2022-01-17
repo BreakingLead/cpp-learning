@@ -13,8 +13,8 @@ private:
     
 public:
     Encoder(vector<char>);
-    vector<char> GenerateEncodedData();
-    vector<char> GenerateEncodedData(vector<char>);
-    vector<char> GenerateChessEncodedData();
-    vector<char> GenerateChessEncodedData(vector<char>);
+    void SetDatain(vector<char>);
+    void GenerateEncodedData();
+    void GenerateChessEncodedData();
+    vector<char> GetEncodedData();
 };

@@ -2,11 +2,14 @@
 #include <algorithm>
 #include <string>
 #include <vector>
+#include <cmath>
+#include "encoder.hpp"
 using namespace std;
 class Encoder
 {
 private:
     vector<char> in_datas;
+    vector<char> out_datas;
 
 public:
     Encoder(vector<char> _in_datas)
@@ -14,18 +17,33 @@ public:
         in_datas = _in_datas;
     }
 
-    vector<char> GenerateChessEncodedData()
+    void SetDatain()
     {
 
-        vector<char> out_datas;
-        for (auto i : in_datas){
+    }
+
+    void GenerateChessEncodedData()
+    {
+        int sum;
+        for (auto i : in_datas)
+        {
             if (in_datas[i] - '0' < 0)
-                throw "Format is not correct!";
-            
+                throw exception();
+            sum += in_datas[i] - '0';
         }
-        
-        for(auto i:in_datas){
-            
+        int flag=0;
+        for (auto i : in_datas)
+        {
+            for (int j = 0; j < in_datas[i] - '0'; i++)
+            {
+                out_datas.push_back(flag);
+            }
+            flag=!flag;
         }
+    }
+
+    vector<char> GetEncodedData()
+    {
+        return out_datas;
     }
 };
