@@ -12,5 +12,6 @@ int main()
         if (isalnum(c[i]))
             ans++;
     printf("%d",ans);
+    
     return 0;
 }
