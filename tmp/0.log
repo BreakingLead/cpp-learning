@@ -1,0 +1,5 @@
+Entering playback thread (ALSA).
+Cannot open PCM playback device: 设备或资源忙(-16)
+Exit playback thread fail: -16
+Entering capture thread (ALSA).
+alsabat -c1 --saveplay default_mono.wav
