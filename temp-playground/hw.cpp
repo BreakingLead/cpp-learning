@@ -51,7 +51,7 @@ public:
 		FillRect(int(fBatX), ScreenHeight() - 20, int(fBatWidth), 10, olc::GREEN);
 
 		// Draw Ball
-		FillCircle(vBall, int(fBallRadius), olc::CYAN);
+		FillCircle(vBall, int(fBallRadius), olc::RED);
 		return true;
   }
 };
