@@ -6,17 +6,6 @@
 #include <iterator>
 
 using namespace std;
-string rev( string str, int start, int end ) {
-    if ( str != "" ) {
-        for ( int i = start, j = end; i < j; i++, j-- ) {
-            char tmp = str[ i ];
-            str[ i ] = str[ j ];
-            str[ j ] = tmp;
-        }
-        return str;
-    }
-    return "";
-}
 
 int main() {
 #ifndef ONLINE_JUDGE
@@ -30,8 +19,13 @@ int main() {
     cin >> flag_case >> flag_cnt >> flag_rev >> orig;
 
     for ( int i = 0; i <= orig.size(); i++ ) {
-        if (i != 0 && i != orig.size() && orig[ i ] == '-' &&
+        if ( i != 0 && i != orig.size() && orig[ i ] == '-' &&
              ( isalnum( orig[ i - 1 ] ) ) && isalnum( orig[ i + 1 ] ) ) {
+
+            if ( isdigit( orig[ i - 1 ] ) && isalpha( orig[ i + 1 ] ) )
+                res.push_back( orig[ i ] );
+            if ( isdigit( orig[ i + 1 ] ) && isalpha( orig[ i - 1 ] ) )
+                res.push_back( orig[ i ] );
 
             if ( flag_case == 1 ) {
                 if ( flag_rev == 1 ) {
@@ -66,7 +60,6 @@ int main() {
             res.push_back( orig[ i ] );
         }
     }
-
 
     cout << res;
     return 0;

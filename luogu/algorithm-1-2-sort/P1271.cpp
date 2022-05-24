@@ -13,7 +13,6 @@ int main() {
     for(int i=1;i<=m;i++){
         int t;
         scanf("%d",&t);
-sa
     }
     return 0;
 }
