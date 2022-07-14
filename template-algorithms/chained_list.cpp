@@ -10,31 +10,39 @@ int n,a[MAXN];
 struct node{
     int data;
     node * next;
+    node(){
+        data=0;
+        next=NULL;
+    }
 };
 
 typedef node*  nodeptr;
 
-nodeptr find_end(){
-    nodeptr now=head;
-    while(now.next != NULL){
-        now=now.next;
-    }
-}
-
-
 nodeptr head=NULL;
 
-
-nodeptr add_node(){
-    nodeptr np = (nodeptr) malloc(sizeof(node));
-    np=NULL;
-    nodeptr raw=find_end();
-    raw->next=np;
-    return np;
+void init(){
+    node newnode;
+    head = &newnode;
 }
 
+void insert_node(nodeptr raw,node new){
+    nodeptr p =raw;
+    raw->next = &new;
+    new.next=*p;
+}
+
+void add_node(node new){
+
+}
 
 int main() {
-    cout<<find_end();
+    init();
+    nodeptr p=(nodeptr)malloc(sizeof(node));
+    p->data=2;
+    head=p;
+    nodeptr q=(nodeptr)malloc(sizeof(node));
+    q->data=3;
+    p->next=q;
+
     return 0;
 }

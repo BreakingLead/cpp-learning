@@ -7,13 +7,6 @@ double a, t;
 
 
 
-
-
-
-
-
-
-
 int main()
 {
     cin >> n;

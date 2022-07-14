@@ -6,6 +6,7 @@
 #define MAXN 3000
 using namespace std;
 
+
 struct Bigint {
     int len, data[ MAXN ];
 
