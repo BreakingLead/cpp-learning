@@ -33,6 +33,7 @@ int main() {
             for ( int j = s; j < t; j++ ) {
                 if ( a[ j ] > a[ j + 1 ] ) {
                     res += a[ j ] - a[ j + 1 ];
+                    
                 }
             }
         }
